@@ -2,22 +2,40 @@ import java.util.Objects;
 
 public class Human {
 
-    int yearOfBirth;       // год рождения
+    private int yearOfBirth;       // год рождения
     String name;          // имя
-    String town;          // город
+    private String town;          // город
     String jobTitle;     // профессия
 
     Human()
-    {}
+    {
+        this.yearOfBirth=0;
+        this.name="No info";
+        this.town="No info";
+        this.jobTitle="No info";
+    }
+    public int getYearOfBirth() {
+        return yearOfBirth;
+    }
 
+    public String getTown() {
+        return town;
+    }
 
+    public void setTown(String town) {
+        if (town==null^Objects.equals(town,"")){town="Информации нет";}
+        this.town = town;
+    }
 
-    Human (int yearOfBirth,String name,String town,String jobTitle) {
-        this.yearOfBirth = Math.max(yearOfBirth, 0);
+    public void setYearOfBirth(int yearOfBirth) {
+        yearOfBirth = Math.max(yearOfBirth, 0);
+        this.yearOfBirth = yearOfBirth;
+    }
+    Human (int yearOfBirth, String name, String town, String jobTitle) {
+        Human.this.setYearOfBirth(yearOfBirth);
         if (name==null^ Objects.equals(name, "")){this.name="Информации нет";}
         else {this.name=name;}
-        if (town==null^Objects.equals(town,"")){this.town="Информации нет";}
-        else {this.town=town;}
+        Human.this.setTown(town);
         if (jobTitle==null^Objects.equals(jobTitle,"")){this.jobTitle="Информации нет";}
         else {this.jobTitle=jobTitle;}
     }
@@ -28,4 +46,8 @@ public class Human {
                 town + ". Я родился в " + yearOfBirth + " году"
                 + ". Я работаю на должности " + jobTitle + ". Будем знакомы!";
     }
+
 }
+
+//
+

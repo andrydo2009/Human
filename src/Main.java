@@ -7,6 +7,7 @@ public class Main {
         Human Person_4 = new Human(2011, "Артем", "Хабаровск", "Школьник");
         Human Person_5 = new Human(-80,"",null,"");
         Human Person_6 = new Human();
+        Human Person_7 = new Human(2001,"Владимир","Казань","");
         System.out.println(Person_1);
         System.out.println(Person_2);
         System.out.println(Person_3);
@@ -14,6 +15,15 @@ public class Main {
         System.out.println(Person_5);
         System.out.println(Person_6);
 
+        Person_1.setYearOfBirth(-90);
+        Person_1.setTown("New York");
+        System.out.println(Person_1.getYearOfBirth());
+        System.out.println(Person_1.getTown());
+        System.out.println(Person_1);
+        System.out.println(Person_7);
 
+        System.out.println(" ");
     }
 }
+
+//
