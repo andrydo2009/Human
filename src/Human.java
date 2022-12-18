@@ -43,7 +43,7 @@ public class Human {
     @Override
     public String toString() {
         return "Привет! Меня зовут " + name + ". Я из города " +
-                town + ". Я родился в " + yearOfBirth + " году"
+                getTown() + ". Я родился в " + getYearOfBirth() + " году"
                 + ". Я работаю на должности " + jobTitle + ". Будем знакомы!";
     }
 
